@@ -110,6 +110,7 @@ struct UnitMassConverterView: View {
         .background(Color(.systemGray5))
         .cornerRadius(15)
         .padding(.horizontal, 20)
+        .padding(.vertical, 3)
     }
 }
 
