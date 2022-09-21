@@ -90,6 +90,9 @@ struct UnitMassConverterView: View {
                                 Spacer()
                                 Button("Done") {
                                     isInputActive = false
+                                    if firstAmount == 0 {
+                                        firstAmount = 1
+                                    }
                                 }
                             }
                         }
