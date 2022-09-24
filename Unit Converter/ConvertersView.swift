@@ -16,11 +16,9 @@ struct ConvertersView: View {
     @FocusState var isInputActive: Bool
     var body: some View {
         VStack {
-            // Name
             Text(name)
                 .font(.system(size: 25))
                 .frame(height: 20)
-            
             HStack {
                 VStack {
                     Picker("Unit", selection: $inUnit) {
@@ -29,6 +27,9 @@ struct ConvertersView: View {
                         }
                     }
                     .accentColor(Color(.systemGreen))
+                    .onChange(of: inUnit) { _ in
+                        UserDefaults.standard.set(SwitchFromUnits(unit: inUnit), forKey: "InUnit"+name)
+                    }
                     TextField("", value: $firstAmount, formatter: Formatter.inNumberFormat)
                         .onTapGesture {
                             firstAmount = 0
@@ -37,7 +38,7 @@ struct ConvertersView: View {
                         .textFieldStyle(.roundedBorder)
                         .focused($isInputActive)
                         .frame(width: 80)
-                }.frame(width: 180)
+                }.frame(minWidth: 180)
                 Image(systemName: "arrow.right")
                     .font(.system(size: 20))
                 VStack {
@@ -47,10 +48,13 @@ struct ConvertersView: View {
                         }
                     }
                     .accentColor(Color(.systemGreen))
+                    .onChange(of: outUnit) { _ in
+                        UserDefaults.standard.set(SwitchFromUnits(unit: outUnit), forKey: "OutUnit"+name)
+                    }
                     Text(SNum(from: Measurement(value: firstAmount, unit: inUnit).converted(to: outUnit).value as NSNumber))
                         .font(.system(size: 25))
                         .textSelection(.enabled)
-                }.frame(width: 180)
+                }.frame(minWidth: 180)
             }
         }
         .frame(height: 140)
@@ -58,9 +62,10 @@ struct ConvertersView: View {
         .cornerRadius(15)
         .padding(.horizontal, 20)
         .padding(.vertical, 3)
-//        .onDisappear {
-//            UserDefaults.standard.set($inUnit.rawValue, forKey: "dimension")
-//        }
+        .task {
+            inUnit = SwitchToUnits(text: UserDefaults.standard.string(forKey: "InUnit"+name) ?? "")
+            outUnit = SwitchToUnits(text: UserDefaults.standard.string(forKey: "OutUnit"+name) ?? "")
+        }
     }
     func SNum(from: NSNumber) -> String {
         let formatter = NumberFormatter()
