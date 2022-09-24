@@ -17,10 +17,6 @@ struct MainView: View {
                     ForEach(converters, id: \.name) { converter in
                         ConvertersView(name: converter.name, units: converter.units, inUnit: converter.inUnit, outUnit: converter.outUnit, isInputActive: _isInputActive)
                     }
-//                    ConvertersView(name: "Acceleration", units: UnitAccelerationValues, inUnit: UnitAcceleration.gravity, outUnit: UnitAcceleration.gravity, isInputActive: _isInputActive)
-//
-//                    ConvertersView(name: "Length", units: UnitLengthValues, inUnit: UnitLength.meters, outUnit: UnitLength.meters, isInputActive: _isInputActive)
-//                    ConvertersView(name: "Mass", units: UnitMassValues, inUnit: UnitMass.kilograms, outUnit: UnitMass.kilograms, isInputActive: _isInputActive)
                 }
             }
             .navigationTitle("Converters")

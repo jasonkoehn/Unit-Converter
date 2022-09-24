@@ -9,10 +9,10 @@ import SwiftUI
 
 struct ConvertersView: View {
     var name: String
-    var units: [Units]
+    var units: [String]
     @State var firstAmount: Double = 1
-    @State var inUnit: Dimension
-    @State var outUnit: Dimension
+    @State var inUnit: String
+    @State var outUnit: String
     @FocusState var isInputActive: Bool
     var body: some View {
         VStack {
@@ -20,15 +20,16 @@ struct ConvertersView: View {
                 .font(.system(size: 25))
                 .frame(height: 20)
             HStack {
+                Spacer()
                 VStack {
                     Picker("Unit", selection: $inUnit) {
-                        ForEach(units, id: \.text) { unit in
-                            Text(unit.text).tag(unit.unit)
+                        ForEach(units, id: \.self) { unit in
+                            Text(unit)
                         }
                     }
                     .accentColor(Color(.systemGreen))
                     .onChange(of: inUnit) { _ in
-                        UserDefaults.standard.set(SwitchFromUnits(unit: inUnit), forKey: "InUnit"+name)
+                        UserDefaults.standard.set(inUnit, forKey: "InUnit"+name)
                     }
                     TextField("", value: $firstAmount, formatter: Formatter.inNumberFormat)
                         .onTapGesture {
@@ -38,23 +39,34 @@ struct ConvertersView: View {
                         .textFieldStyle(.roundedBorder)
                         .focused($isInputActive)
                         .frame(width: 80)
-                }.frame(minWidth: 180)
-                Image(systemName: "arrow.right")
-                    .font(.system(size: 20))
+                }
+                Spacer()
+                Button(action: {
+                    let inu = inUnit
+                    let outu = outUnit
+                    inUnit = outu
+                    outUnit = inu
+                }) {
+                    Image(systemName: "arrow.right")
+                        .font(.system(size: 23))
+                        .foregroundColor(.white)
+                }
+                Spacer()
                 VStack {
                     Picker("Unit", selection: $outUnit) {
-                        ForEach(units, id: \.text) { unit in
-                            Text(unit.text).tag(unit.unit)
+                        ForEach(units, id: \.self) { unit in
+                            Text(unit)
                         }
                     }
                     .accentColor(Color(.systemGreen))
                     .onChange(of: outUnit) { _ in
-                        UserDefaults.standard.set(SwitchFromUnits(unit: outUnit), forKey: "OutUnit"+name)
+                        UserDefaults.standard.set(outUnit, forKey: "OutUnit"+name)
                     }
-                    Text(SNum(from: Measurement(value: firstAmount, unit: inUnit).converted(to: outUnit).value as NSNumber))
+                    Text(SNum(from: Measurement(value: firstAmount, unit: SwitchToUnits(text: inUnit)).converted(to: SwitchToUnits(text: outUnit)).value as NSNumber))
                         .font(.system(size: 25))
                         .textSelection(.enabled)
-                }.frame(minWidth: 180)
+                }
+                Spacer()
             }
         }
         .frame(height: 140)
@@ -63,8 +75,8 @@ struct ConvertersView: View {
         .padding(.horizontal, 20)
         .padding(.vertical, 3)
         .task {
-            inUnit = SwitchToUnits(text: UserDefaults.standard.string(forKey: "InUnit"+name) ?? "")
-            outUnit = SwitchToUnits(text: UserDefaults.standard.string(forKey: "OutUnit"+name) ?? "")
+            inUnit = UserDefaults.standard.string(forKey: "InUnit"+name) ?? ""
+            outUnit = UserDefaults.standard.string(forKey: "OutUnit"+name) ?? ""
         }
     }
     func SNum(from: NSNumber) -> String {
