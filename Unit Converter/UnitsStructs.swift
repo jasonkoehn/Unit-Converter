@@ -17,7 +17,7 @@ struct Converters {
 var converters: [Converters] = [
     Converters(name: "Acceleration", units: AccelerationValues, inUnit: "Gravity", outUnit: "Gravity"),
     Converters(name: "Angle", units: AngleValues, inUnit: "Degrees", outUnit: "Degrees"),
-//    Converters(name: "Area", units: AreaValues, inUnit: "Square Feet", outUnit: "Square Feet"),
+    //    Converters(name: "Area", units: AreaValues, inUnit: "Square Feet", outUnit: "Square Feet"),
     Converters(name: "Length", units: LengthValues, inUnit: "Meters", outUnit: "Meters"),
     Converters(name: "Mass", units: MassValues, inUnit: "Kilograms", outUnit: "Kilograms")]
 
@@ -29,10 +29,10 @@ struct Units {
 var AccelerationValues = ["Meters Per Second Squared", "Gravity"]
 
 var AngleValues = ["Degrees", "Arc Minutes", "Arc Seconds", "Radians", "Gradians", "Revolutions"]
-//
+
 var AreaValues = ["Square Megameters", "Square Kilometers", "Square Meters", "Square Centimeters", "Square Millimeters", "Square Micrometers", "Square Nanometers", "Square Inches", "Square Feet", "Square Yards", "Square Miles", "Acres", "Ares", "Hectares"]
 
-var ConcentrationMassValues = ["Grams Per Liter", "Milligrams Per Deciliter", "Millimoles Per Liter"]
+var ConcentrationMassValues = ["Grams Per Liter", "Milligrams Per Deciliter"/**, "Millimoles Per Liter"*/]
 
 var DurationValues = ["Seconds", "Minutes", "Hours"]
 
@@ -51,7 +51,7 @@ var FrequencyValues = ["Terahertz", "Gigahertz", "Megahertz", "Kilohertz", "Hert
 var FuelEfficiencyValues = ["Liters Per 100 Kilometers", "Miles Per Gallon", "Miles Per Imperial Gallon"]
 
 //var InformationStorageValues = []
-//
+
 var LengthValues = ["Megameters", "Kilometers", "Hectometers", "Decameters", "Meters", "Decimeters", "Centimeters", "Millimeters", "Micrometers", "Nanometers", "Picometers", "Inches", "Feet", "Yards", "Miles", "Scandinavian Miles", "Light Years", "Nautical Miles", "Fathoms", "Furlongs", "Astronomical Units", "Parsecs"]
 
 var MassValues = ["Kilograms", "Grams", "Decigrams", "Centigrams", "Milligrams", "Micrograms", "Nanograms", "Picograms", "Ounces", "Pounds", "Stones", "MetricTons", "ShortTons", "Carats", "OuncesTroy", "Slugs"]
@@ -62,6 +62,6 @@ var PressureValues = ["Newtons Per Meter Squared", "Gigapascals", "Megapascals",
 
 var SpeedValues = ["Meters Per Second", "Kilometers Per Hour", "Miles Per Hour", "Knots"]
 
-var TemperatureValues = ["Kelvin", "Degree Celsius", "Degree Fahrenheit"]
+var TemperatureValues = ["Kelvin", "Celsius", "Fahrenheit"]
 
 var VolumeValues = ["Megaliters", "Kiloliters", "Liters", "Deciliters", "Centiliters", "Milliliters", "Cubic Kilometers", "Cubic Meters", "Cubic Decimeters", "Cubic Millimeters", "Cubic Inches", "Cubic Feet", "Cubic Yards", "Cubic Miles", "Acre Feet", "Bushels", "Teaspoons", "Tablespoons", "Fluid Ounces", "Cups", "Pints", "Quarts", "Gallons", "Imperial Teaspoons", "Imperial Tablespoons", "Imperial Fluid Ounces", "Imperial Pints", "Imperial Quarts", "Imperial Gallons", "Metric Cups"]
