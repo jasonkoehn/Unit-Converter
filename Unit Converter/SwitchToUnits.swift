@@ -10,11 +10,30 @@ import Foundation
 func SwitchToUnits(text: String) -> Dimension {
     var unitName: Dimension
     switch text {
+        
         //UnitAcceleration
     case "Meters Per Second Squared":
         unitName = UnitAcceleration.metersPerSecondSquared
     case "Gravity":
         unitName = UnitAcceleration.gravity
+        
+        //UnitArea
+//    case " ":
+//        unitName = UnitArea
+        
+        //UnitAngle
+    case "Degrees":
+        unitName = UnitAngle.degrees
+    case "Arc Minutes":
+        unitName = UnitAngle.arcMinutes
+    case "Arc Seconds":
+        unitName = UnitAngle.arcSeconds
+    case "Radians":
+        unitName = UnitAngle.radians
+    case "Gradians":
+        unitName = UnitAngle.gradians
+    case "Revolutions":
+        unitName = UnitAngle.revolutions
         
         //UnitLength
     case "Megameters":
