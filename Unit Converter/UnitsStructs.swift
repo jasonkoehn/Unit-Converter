@@ -17,7 +17,11 @@ struct Converters {
 var converters: [Converters] = [
     Converters(name: "Acceleration", units: AccelerationValues, inUnit: "Gravity", outUnit: "Gravity"),
     Converters(name: "Angle", units: AngleValues, inUnit: "Degrees", outUnit: "Degrees"),
-    //    Converters(name: "Area", units: AreaValues, inUnit: "Square Feet", outUnit: "Square Feet"),
+    Converters(name: "Area", units: AreaValues, inUnit: "Square Feet", outUnit: "Square Feet"),
+    Converters(name: "Concentration Mass", units: ConcentrationMassValues, inUnit: "Grams Per Liter", outUnit: "Grams Per Liter"),
+    
+    
+    
     Converters(name: "Length", units: LengthValues, inUnit: "Meters", outUnit: "Meters"),
     Converters(name: "Mass", units: MassValues, inUnit: "Kilograms", outUnit: "Kilograms")]
 

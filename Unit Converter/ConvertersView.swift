@@ -11,8 +11,8 @@ struct ConvertersView: View {
     var name: String
     var units: [String]
     @State var firstAmount: Double = 1
-    @State var inUnit: String
-    @State var outUnit: String
+    @State var inUnit: String = ""
+    @State var outUnit: String = ""
     @FocusState var isInputActive: Bool
     var body: some View {
         VStack {
@@ -38,7 +38,7 @@ struct ConvertersView: View {
                         .keyboardType(.decimalPad)
                         .textFieldStyle(.roundedBorder)
                         .focused($isInputActive)
-                        .frame(width: 80)
+                        .frame(width: 100)
                 }
                 Spacer()
                 Button(action: {
@@ -72,7 +72,7 @@ struct ConvertersView: View {
         .frame(height: 140)
         .background(Color(.systemGray5))
         .cornerRadius(15)
-        .padding(.horizontal, 20)
+        .padding(.horizontal, 10)
         .padding(.vertical, 3)
         .task {
             inUnit = UserDefaults.standard.string(forKey: "InUnit"+name) ?? ""

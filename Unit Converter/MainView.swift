@@ -15,7 +15,7 @@ struct MainView: View {
             ScrollView {
                 VStack {
                     ForEach(converters, id: \.name) { converter in
-                        ConvertersView(name: converter.name, units: converter.units, inUnit: converter.inUnit, outUnit: converter.outUnit, isInputActive: _isInputActive)
+                        ConvertersView(name: converter.name, units: converter.units, isInputActive: _isInputActive)
                     }
                 }
             }
