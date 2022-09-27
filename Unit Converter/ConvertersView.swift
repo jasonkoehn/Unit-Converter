@@ -19,28 +19,30 @@ struct ConvertersView: View {
             Text(name)
                 .font(.system(size: 25))
                 .frame(height: 20)
+                .padding(.top, 15)
             HStack {
-                Spacer()
-                VStack {
-                    Picker("Unit", selection: $inUnit) {
-                        ForEach(units, id: \.self) { unit in
-                            Text(unit)
+                Spacer().overlay(
+                    VStack {
+                        Picker("Unit", selection: $inUnit) {
+                            ForEach(units, id: \.self) { unit in
+                                Text(unit)
+                            }
                         }
-                    }
-                    .accentColor(Color(.systemGreen))
-                    .onChange(of: inUnit) { _ in
-                        UserDefaults.standard.set(inUnit, forKey: "InUnit"+name)
-                    }
-                    TextField("", value: $firstAmount, formatter: Formatter.inNumberFormat)
-                        .onTapGesture {
-                            firstAmount = 0
+                        .accentColor(Color(.systemGreen))
+                        .onChange(of: inUnit) { _ in
+                            UserDefaults.standard.set(inUnit, forKey: "InUnit"+name)
                         }
-                        .keyboardType(.decimalPad)
-                        .textFieldStyle(.roundedBorder)
-                        .focused($isInputActive)
-                        .frame(width: 100)
-                }
-                Spacer()
+                        .padding(.vertical, 5)
+                        TextField("", value: $firstAmount, formatter: Formatter.inNumberFormat)
+                            .onTapGesture {
+                                firstAmount = 0
+                            }
+                            .keyboardType(.decimalPad)
+                            .textFieldStyle(.roundedBorder)
+                            .focused($isInputActive)
+                            .frame(width: 100)
+                    }
+                )
                 Button(action: {
                     let inu = inUnit
                     let outu = outUnit
@@ -49,25 +51,28 @@ struct ConvertersView: View {
                 }) {
                     Image(systemName: "arrow.right")
                         .font(.system(size: 23))
-                        .foregroundColor(.white)
+                        .foregroundColor(Color("Text"))
                 }
-                Spacer()
-                VStack {
-                    Picker("Unit", selection: $outUnit) {
-                        ForEach(units, id: \.self) { unit in
-                            Text(unit)
+                Spacer().overlay(
+                    VStack {
+                        Picker("Unit", selection: $outUnit) {
+                            ForEach(units, id: \.self) { unit in
+                                Text(unit)
+                            }
                         }
+                        .accentColor(Color(.systemGreen))
+                        .onChange(of: outUnit) { _ in
+                            UserDefaults.standard.set(outUnit, forKey: "OutUnit"+name)
+                        }
+                        .padding(.vertical, 5)
+                        Text(SNum(from: Measurement(value: firstAmount, unit: SwitchToUnits(text: inUnit)).converted(to: SwitchToUnits(text: outUnit)).value as NSNumber))
+                            .font(.system(size: 25))
+                            .textSelection(.enabled)
                     }
-                    .accentColor(Color(.systemGreen))
-                    .onChange(of: outUnit) { _ in
-                        UserDefaults.standard.set(outUnit, forKey: "OutUnit"+name)
-                    }
-                    Text(SNum(from: Measurement(value: firstAmount, unit: SwitchToUnits(text: inUnit)).converted(to: SwitchToUnits(text: outUnit)).value as NSNumber))
-                        .font(.system(size: 25))
-                        .textSelection(.enabled)
-                }
-                Spacer()
+                )
             }
+            .padding(.top, 30)
+            .padding(.bottom, 55)
         }
         .background(Color(.systemGray5))
         .cornerRadius(15)
