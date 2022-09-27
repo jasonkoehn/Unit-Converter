@@ -14,14 +14,12 @@ struct ConvertersView: View {
     @State var inUnit: String = ""
     @State var outUnit: String = ""
     @FocusState var isInputActive: Bool
-    @State var geoWidth: Double
-    @State var geoHeight: Double
     var body: some View {
         VStack {
             Text(name)
                 .font(.system(size: 25))
                 .frame(height: 20)
-            HStack(alignment: .center) {
+            HStack {
                 Spacer()
                 VStack {
                     Picker("Unit", selection: $inUnit) {
@@ -71,7 +69,6 @@ struct ConvertersView: View {
                 Spacer()
             }
         }
-        //        .frame(height: 160)
         .background(Color(.systemGray5))
         .cornerRadius(15)
         .padding(.horizontal, 10)

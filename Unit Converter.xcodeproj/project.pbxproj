@@ -16,6 +16,7 @@
 		87A6B7E128DBF7E200EEB72A /* UnitsStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6B7E028DBF7E200EEB72A /* UnitsStructs.swift */; };
 		87A6B7E328DC1BA300EEB72A /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6B7E228DC1BA300EEB72A /* SettingsView.swift */; };
 		87A6B7E528DC1BB600EEB72A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A6B7E428DC1BB600EEB72A /* MainView.swift */; };
+		87D6694228E2665000AA3D43 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D6694128E2665000AA3D43 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		87A6B7E028DBF7E200EEB72A /* UnitsStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitsStructs.swift; sourceTree = "<group>"; };
 		87A6B7E228DC1BA300EEB72A /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		87A6B7E428DC1BB600EEB72A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		87D6694128E2665000AA3D43 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				87A6B7E028DBF7E200EEB72A /* UnitsStructs.swift */,
 				879A71F928DE7CB300AB4EB7 /* SwitchToUnits.swift */,
 				8705064528DBB827004D9C91 /* Extensions.swift */,
+				87D6694128E2665000AA3D43 /* ContentView.swift */,
 				871D7AA828DB68C30092618D /* Assets.xcassets */,
 				871D7AAA28DB68C30092618D /* Unit_Converter.entitlements */,
 				871D7AAB28DB68C30092618D /* Preview Content */,
@@ -156,6 +159,7 @@
 			files = (
 				87A6B7E128DBF7E200EEB72A /* UnitsStructs.swift in Sources */,
 				87A6B7E528DC1BB600EEB72A /* MainView.swift in Sources */,
+				87D6694228E2665000AA3D43 /* ContentView.swift in Sources */,
 				87A6B7DF28DBDE1300EEB72A /* ConvertersView.swift in Sources */,
 				87A6B7E328DC1BA300EEB72A /* SettingsView.swift in Sources */,
 				879A71FA28DE7CB300AB4EB7 /* SwitchToUnits.swift in Sources */,
