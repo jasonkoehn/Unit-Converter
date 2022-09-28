@@ -26,10 +26,6 @@ var converters: [Converters] = [
     Converters(name: "Mass", units: MassValues, inUnit: "Kilograms", outUnit: "Kilograms")]
 
 
-struct Units {
-    var text: String
-    var unit: Dimension
-}
 var AccelerationValues = ["Meters Per Second Squared", "Gravity"]
 
 var AngleValues = ["Degrees", "Arc Minutes", "Arc Seconds", "Radians", "Gradians", "Revolutions"]

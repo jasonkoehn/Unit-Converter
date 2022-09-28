@@ -72,7 +72,7 @@ struct ConvertersView: View {
                 )
             }
             .padding(.top, 30)
-            .padding(.bottom, 55)
+            .padding(.bottom, 53)
         }
         .background(Color(.systemGray5))
         .cornerRadius(15)
