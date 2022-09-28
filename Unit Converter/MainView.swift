@@ -10,22 +10,12 @@ import SwiftUI
 struct MainView: View {
     @State var showSettingsView = false
     @FocusState var isInputActive: Bool
-    @State private var orientation = "Portrait"
-    let columns = [GridItem(),GridItem()]
     var body: some View {
         NavigationView {
             ScrollView {
-                if orientation == "Portrait" {
-                    VStack {
-                        ForEach(converters, id: \.name) { converter in
-                            ConvertersView(name: converter.name, units: converter.units, inUnit: converter.inUnit, outUnit: converter.outUnit, isInputActive: _isInputActive)
-                        }
-                    }
-                } else if orientation == "Landscape" {
-                    LazyVGrid(columns: columns, spacing: 7) {
-                        ForEach(converters, id: \.name) { converter in
-                            ConvertersView(name: converter.name, units: converter.units, inUnit: converter.inUnit, outUnit: converter.outUnit, isInputActive: _isInputActive)
-                        }
+                VStack {
+                    ForEach(converters, id: \.name) { converter in
+                        ConvertersView(name: converter.name, units: converter.units, isInputActive: _isInputActive)
                     }
                 }
             }
@@ -49,20 +39,6 @@ struct MainView: View {
         .sheet(isPresented: $showSettingsView) {
             NavigationView {
                 SettingsView()
-            }
-        }
-        .onRotate { newOrientation in
-            let lastOrientation = orientation
-            if newOrientation.isPortrait {
-                orientation = "Portrait"
-            } else if newOrientation.isLandscape {
-                orientation = "Landscape"
-            } else if newOrientation.isFlat {
-                if lastOrientation == "Portrait" {
-                    orientation = "Portrait"
-                } else if lastOrientation == "Landscape" {
-                    orientation = "Landscape"
-                }
             }
         }
     }

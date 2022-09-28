@@ -76,8 +76,8 @@ struct ConvertersView: View {
         }
         .background(Color(.systemGray5))
         .cornerRadius(15)
-        .padding(.horizontal, 10)
-        .padding(.vertical, 3)
+        .padding(.horizontal, 8)
+        .padding(.vertical, 2)
         .task {
             inUnit = UserDefaults.standard.string(forKey: "InUnit"+name) ?? ""
             outUnit = UserDefaults.standard.string(forKey: "OutUnit"+name) ?? ""
