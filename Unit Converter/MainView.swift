@@ -10,14 +10,16 @@ import SwiftUI
 struct MainView: View {
     @State var showSettingsView = false
     @FocusState var isInputActive: Bool
+    var columns = [GridItem(.adaptive(minimum: 335))]
     var body: some View {
         NavigationView {
             ScrollView {
-                VStack {
+                LazyVGrid(columns: columns) {
                     ForEach(converters, id: \.name) { converter in
                         ConvertersView(name: converter.name, units: converter.units, isInputActive: _isInputActive)
                     }
                 }
+                .padding(.horizontal, 7)
             }
             .navigationTitle("Converters")
             .toolbar {
