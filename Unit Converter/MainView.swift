@@ -15,9 +15,33 @@ struct MainView: View {
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: columns) {
-                    ForEach(converters, id: \.name) { converter in
-                        ConvertersView(name: converter.name, units: converter.units, isInputActive: _isInputActive)
+                    Group {
+                        ConvertersView(name: "Acceleration", units: AccelerationValues, isInputActive: _isInputActive)
+                        ConvertersView(name: "Angle", units: AngleValues, isInputActive: _isInputActive)
+                        ConvertersView(name: "Area", units: AreaValues, isInputActive: _isInputActive)
+                        ConvertersView(name: "Concentration Mass", units: ConcentrationMassValues, isInputActive: _isInputActive)
+                        ConvertersView(name: "Duration", units: DurationValues, isInputActive: _isInputActive)
+                        ConvertersView(name: "Electric Charge", units: ElectricChargeValues, isInputActive: _isInputActive)
+                        ConvertersView(name: "Electric Current", units: ElectricCurrentValues, isInputActive: _isInputActive)
+                        ConvertersView(name: "Electric Potential Difference", units: ElectricPotentialDifferenceValues, isInputActive: _isInputActive)
+                        ConvertersView(name: "Electric Resistance", units: ElectricResistanceValues, isInputActive: _isInputActive)
+                        ConvertersView(name: "Energy", units: EnergyValues, isInputActive: _isInputActive)
                     }
+                    Group {
+                        ConvertersView(name: "Frequency", units: FrequencyValues, isInputActive: _isInputActive)
+                        ConvertersView(name: "Fuel Efficiency", units: FuelEfficiencyValues, isInputActive: _isInputActive)
+                        ConvertersView(name: "Length", units: LengthValues, isInputActive: _isInputActive)
+                        ConvertersView(name: "Mass", units: MassValues, isInputActive: _isInputActive)
+                        ConvertersView(name: "Power", units: PowerValues, isInputActive: _isInputActive)
+                        ConvertersView(name: "Pressure", units: PressureValues, isInputActive: _isInputActive)
+                        ConvertersView(name: "Speed", units: SpeedValues, isInputActive: _isInputActive)
+                        ConvertersView(name: "Temperature", units: TemperatureValues, isInputActive: _isInputActive)
+                        ConvertersView(name: "Volume", units: VolumeValues, isInputActive: _isInputActive)
+                    }
+
+//                    ForEach(converters, id: \.name) { converter in
+//                        ConvertersView(name: converter.name, units: converter.units, isInputActive: _isInputActive)
+//                    }
                 }
                 .padding(.horizontal, 7)
             }

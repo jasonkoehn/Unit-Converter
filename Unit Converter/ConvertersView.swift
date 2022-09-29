@@ -10,10 +10,10 @@ import SwiftUI
 struct ConvertersView: View {
     var name: String
     var units: [String]
+    @FocusState var isInputActive: Bool
     @State var firstAmount: Double = 1
     @State var inUnit: String = ""
     @State var outUnit: String = ""
-    @FocusState var isInputActive: Bool
     var body: some View {
         VStack {
             Text(name)
@@ -25,7 +25,7 @@ struct ConvertersView: View {
                     VStack {
                         Picker("Unit", selection: $inUnit) {
                             ForEach(units, id: \.self) { unit in
-                                Text(unit)
+                                Text(unit).tag(unit)
                             }
                         }
                         .accentColor(Color(.systemGreen))
@@ -57,7 +57,7 @@ struct ConvertersView: View {
                     VStack {
                         Picker("Unit", selection: $outUnit) {
                             ForEach(units, id: \.self) { unit in
-                                Text(unit)
+                                Text(unit).tag(unit)
                             }
                         }
                         .accentColor(Color(.systemGreen))
