@@ -51,7 +51,7 @@ struct ConvertersView: View {
                 }) {
                     Image(systemName: "arrow.right")
                         .font(.system(size: 23))
-                        .foregroundColor(Color("Text"))
+                        .foregroundColor(Color("TextColor"))
                 }
                 Spacer().overlay(
                     VStack {
