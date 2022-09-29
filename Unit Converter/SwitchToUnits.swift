@@ -67,7 +67,7 @@ func SwitchToUnits(text: String) -> Dimension {
     case "Milligrams Per Deciliter":
         unitName = UnitConcentrationMass.milligramsPerDeciliter
         //    case "Millimoles Per Liter":
-        //        unitName = UnitConcentrationMass.millimolesPerLiter(withGramsPerMole: <#T##Double#>)
+        //        unitName = UnitConcentrationMass.millimolesPerLiter(withGramsPerMole: 1)
         
         //UnitDuration
     case "Seconds":

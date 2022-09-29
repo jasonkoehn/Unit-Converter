@@ -10,18 +10,29 @@ import SwiftUI
 struct Converters {
     var name: String
     var units: [String]
-    var inUnit: String
-    var outUnit: String
 }
 
 var converters: [Converters] = [
-    Converters(name: "Acceleration", units: AccelerationValues, inUnit: "Gravity", outUnit: "Gravity"),
-    Converters(name: "Angle", units: AngleValues, inUnit: "Degrees", outUnit: "Degrees"),
-    Converters(name: "Area", units: AreaValues, inUnit: "Square Feet", outUnit: "Square Feet"),
-    Converters(name: "Concentration Mass", units: ConcentrationMassValues, inUnit: "Grams Per Liter", outUnit: "Grams Per Liter"),
-    
-    Converters(name: "Length", units: LengthValues, inUnit: "Meters", outUnit: "Meters"),
-    Converters(name: "Mass", units: MassValues, inUnit: "Kilograms", outUnit: "Kilograms")]
+    Converters(name: "Acceleration", units: AccelerationValues),
+    Converters(name: "Angle", units: AngleValues),
+    Converters(name: "Area", units: AreaValues),
+    Converters(name: "Concentration Mass", units: ConcentrationMassValues),
+    Converters(name: "Duration", units: DurationValues),
+    Converters(name: "Electric Charge", units: ElectricChargeValues),
+    Converters(name: "Electric Current", units: ElectricCurrentValues),
+    Converters(name: "Electric Potential Difference", units: ElectricPotentialDifferenceValues),
+    Converters(name: "Electric Resistance", units: ElectricResistanceValues),
+    Converters(name: "Energy", units: EnergyValues),
+    Converters(name: "Frequency", units: FrequencyValues),
+    Converters(name: "Fuel Efficiency", units: FuelEfficiencyValues),
+    //Information Storage
+    Converters(name: "Length", units: LengthValues),
+    Converters(name: "Mass", units: MassValues),
+    Converters(name: "Power", units: PowerValues),
+    Converters(name: "Pressure", units: PressureValues),
+    Converters(name: "Speed", units: SpeedValues),
+    Converters(name: "Temperature", units: TemperatureValues),
+    Converters(name: "Volume", units: VolumeValues)]
 
 
 var AccelerationValues = ["Meters Per Second Squared", "Gravity"]
