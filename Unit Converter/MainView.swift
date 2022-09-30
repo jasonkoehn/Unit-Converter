@@ -2,7 +2,7 @@
 //  MainView.swift
 //  Unit Converter
 //
-//  Created by Jason Koehn on 9/21/22.
+//  Created by Jason Koehn on 9/30/22.
 //
 
 import SwiftUI
@@ -16,7 +16,7 @@ struct MainView: View {
             ScrollView {
                 LazyVGrid(columns: columns) {
                     ForEach(converters, id: \.name) { converter in
-                        ConvertersView(name: converter.name, units: converter.units, isInputActive: _isInputActive)
+                        ConverterView(name: converter.name, units: converter.units, inUnit: converter.inUnit, outUnit: converter.outUnit, isInputActive: _isInputActive)
                     }
                 }
                 .padding(.horizontal, 7)
@@ -43,5 +43,11 @@ struct MainView: View {
                 SettingsView()
             }
         }
+    }
+}
+
+struct MainView_Previews: PreviewProvider {
+    static var previews: some View {
+        MainView()
     }
 }

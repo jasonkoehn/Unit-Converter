@@ -1,8 +1,8 @@
 //
-//  SwitchToUnits.swift
+//  UnitsSwitch.swift
 //  Unit Converter
 //
-//  Created by Jason Koehn on 9/23/22.
+//  Created by Jason Koehn on 9/30/22.
 //
 
 import Foundation
@@ -66,8 +66,6 @@ func SwitchToUnits(text: String) -> Dimension {
         unitName = UnitConcentrationMass.gramsPerLiter
     case "Milligrams Per Deciliter":
         unitName = UnitConcentrationMass.milligramsPerDeciliter
-        //    case "Millimoles Per Liter":
-        //        unitName = UnitConcentrationMass.millimolesPerLiter(withGramsPerMole: 1)
         
         //UnitDuration
     case "Seconds":
@@ -166,7 +164,6 @@ func SwitchToUnits(text: String) -> Dimension {
         unitName = UnitFuelEfficiency.milesPerImperialGallon
         
         //UnitInformationStorage
-        //Includes InformationTransfer
     case "Bits":
         unitName = UnitInformationStorage.bits
     case "Kilobits":
@@ -410,9 +407,10 @@ func SwitchToUnits(text: String) -> Dimension {
     case "Metric Cups":
         unitName = UnitVolume.metricCups
         
-        //Defauts
+        //Defaut
     default:
         unitName = UnitLength.meters
     }
     return unitName
 }
+

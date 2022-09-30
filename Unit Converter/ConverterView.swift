@@ -1,19 +1,19 @@
 //
-//  SwiftUIView.swift
+//  ConverterView.swift
 //  Unit Converter
 //
-//  Created by Jason Koehn on 9/21/22.
+//  Created by Jason Koehn on 9/30/22.
 //
 
 import SwiftUI
 
-struct ConvertersView: View {
+struct ConverterView: View {
     var name: String
     var units: [String]
+    @State var inUnit: String
+    @State var outUnit: String
     @FocusState var isInputActive: Bool
     @State var firstAmount: Double = 1
-    @State var inUnit: String = ""
-    @State var outUnit: String = ""
     var body: some View {
         VStack {
             Text(name)
@@ -21,17 +21,12 @@ struct ConvertersView: View {
                 .frame(height: 20)
                 .padding(.top, 15)
             HStack {
-                Spacer().overlay(
+                Spacer().overlay {
                     VStack {
                         Picker("Unit", selection: $inUnit) {
                             ForEach(units, id: \.self) { unit in
                                 Text(unit).tag(unit)
                             }
-                        }
-                        .pickerStyle(.automatic)
-                        .accentColor(Color(.systemGreen))
-                        .onChange(of: inUnit) { _ in
-                            UserDefaults.standard.set(inUnit, forKey: "InUnit"+name)
                         }
                         .padding(.vertical, 5)
                         TextField("", value: $firstAmount, formatter: Formatter.inNumberFormat)
@@ -43,7 +38,7 @@ struct ConvertersView: View {
                             .focused($isInputActive)
                             .frame(width: 100)
                     }
-                )
+                }
                 Button(action: {
                     let inu = inUnit
                     let outu = outUnit
@@ -54,40 +49,36 @@ struct ConvertersView: View {
                         .font(.system(size: 23))
                         .foregroundColor(Color("TextColor"))
                 }
-                Spacer().overlay(
+                Spacer().overlay {
                     VStack {
                         Picker("Unit", selection: $outUnit) {
                             ForEach(units, id: \.self) { unit in
                                 Text(unit).tag(unit)
                             }
                         }
-                        .pickerStyle(.automatic)
-                        .accentColor(Color(.systemGreen))
-                        .onChange(of: outUnit) { _ in
-                            UserDefaults.standard.set(outUnit, forKey: "OutUnit"+name)
-                        }
                         .padding(.vertical, 5)
-                        Text(SNum(from: Measurement(value: firstAmount, unit: SwitchToUnits(text: inUnit)).converted(to: SwitchToUnits(text: outUnit)).value as NSNumber))
+                        Text(FormatNum(from: Measurement(value: firstAmount, unit: SwitchToUnits(text: inUnit)).converted(to: SwitchToUnits(text: outUnit)).value as NSNumber))
                             .font(.system(size: 25))
                             .textSelection(.enabled)
                     }
-                )
+                }
             }
             .padding(.top, 30)
             .padding(.bottom, 53)
         }
         .background(Color(.systemGray5))
         .cornerRadius(15)
-        .padding(.vertical, 2)
-        .task {
-            inUnit = UserDefaults.standard.string(forKey: "InUnit"+name) ?? ""
-            outUnit = UserDefaults.standard.string(forKey: "OutUnit"+name) ?? ""
-        }
     }
-    func SNum(from: NSNumber) -> String {
+    func FormatNum(from: NSNumber) -> String {
         let formatter = NumberFormatter()
         formatter.minimumFractionDigits = 0
         formatter.maximumFractionDigits = 4
         return formatter.string(from: from)!
+    }
+}
+
+struct ConverterView_Previews: PreviewProvider {
+    static var previews: some View {
+        ConverterView(name: "Volume", units: VolumeValues, inUnit: "Liters", outUnit: "Quarts")
     }
 }
