@@ -28,6 +28,7 @@ struct ConvertersView: View {
                                 Text(unit).tag(unit)
                             }
                         }
+                        .pickerStyle(.automatic)
                         .accentColor(Color(.systemGreen))
                         .onChange(of: inUnit) { _ in
                             UserDefaults.standard.set(inUnit, forKey: "InUnit"+name)
@@ -60,6 +61,7 @@ struct ConvertersView: View {
                                 Text(unit).tag(unit)
                             }
                         }
+                        .pickerStyle(.automatic)
                         .accentColor(Color(.systemGreen))
                         .onChange(of: outUnit) { _ in
                             UserDefaults.standard.set(outUnit, forKey: "OutUnit"+name)

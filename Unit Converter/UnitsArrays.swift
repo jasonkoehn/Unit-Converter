@@ -25,14 +25,16 @@ var converters: [Converters] = [
     Converters(name: "Energy", units: EnergyValues),
     Converters(name: "Frequency", units: FrequencyValues),
     Converters(name: "Fuel Efficiency", units: FuelEfficiencyValues),
-    //Information Storage
+    Converters(name: "Information Transfer", units: InformationTransferValues),
+    Converters(name: "Information Storage", units: InformationStorageValues),
     Converters(name: "Length", units: LengthValues),
     Converters(name: "Mass", units: MassValues),
     Converters(name: "Power", units: PowerValues),
     Converters(name: "Pressure", units: PressureValues),
     Converters(name: "Speed", units: SpeedValues),
     Converters(name: "Temperature", units: TemperatureValues),
-    Converters(name: "Volume", units: VolumeValues)]
+    Converters(name: "Volume", units: VolumeValues)
+]
 
 
 var AccelerationValues = ["Meters Per Second Squared", "Gravity"]
@@ -59,12 +61,14 @@ var FrequencyValues = ["Terahertz", "Gigahertz", "Megahertz", "Kilohertz", "Hert
 
 var FuelEfficiencyValues = ["Liters Per 100 Kilometers", "Miles Per Gallon", "Miles Per Imperial Gallon"]
 
-//var InformationStorageValues = []
+var InformationTransferValues = ["Bits", "Kilobits", "Megabits", "Gigabits", "Terabits", "Petabits", "Exabits", "Zettabits", "Yottabits"]
+
+var InformationStorageValues = ["Bytes", "Kilobytes", "Megabytes", "Gigabytes", "Terabytes", "Petabytes", "Exabytes", "Zettabytes", "Yottabytes"]
 
 var LengthValues = ["Megameters", "Kilometers", "Hectometers", "Decameters", "Meters", "Decimeters", "Centimeters", "Millimeters", "Micrometers", "Nanometers", "Picometers", "Inches", "Feet", "Yards", "Miles", "Scandinavian Miles", "Light Years", "Nautical Miles", "Fathoms", "Furlongs", "Astronomical Units", "Parsecs"]
 
 var MassValues = ["Kilograms", "Grams", "Decigrams", "Centigrams", "Milligrams", "Micrograms", "Nanograms", "Picograms", "Ounces", "Pounds", "Stones", "MetricTons", "ShortTons", "Carats", "OuncesTroy", "Slugs"]
-//
+
 var PowerValues = ["Terawatts", "Gigawatts", "Megawatts", "Kilowatts", "Watts", "Milliwatts", "Microwatts", "Nanowatts", "Picowatts", "Femtowatts", "Horsepower"]
 
 var PressureValues = ["Newtons Per Meter Squared", "Gigapascals", "Megapascals", "Kilopascals", "Hectopascals", "Inches of Mercury", "Bars", "Millibars", "Millimeters of Mercury", "Pounds Per Square Inch"]

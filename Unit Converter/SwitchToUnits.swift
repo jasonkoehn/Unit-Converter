@@ -166,6 +166,43 @@ func SwitchToUnits(text: String) -> Dimension {
         unitName = UnitFuelEfficiency.milesPerImperialGallon
         
         //UnitInformationStorage
+        //Includes InformationTransfer
+    case "Bits":
+        unitName = UnitInformationStorage.bits
+    case "Kilobits":
+        unitName = UnitInformationStorage.kilobits
+    case "Megabits":
+        unitName = UnitInformationStorage.megabits
+    case "Gigabits":
+        unitName = UnitInformationStorage.gigabits
+    case "Terabits":
+        unitName = UnitInformationStorage.terabits
+    case "Petabits":
+        unitName = UnitInformationStorage.petabits
+    case "Exabits":
+        unitName = UnitInformationStorage.exabits
+    case "Zettabits":
+        unitName = UnitInformationStorage.zettabits
+    case "Yottabits":
+        unitName = UnitInformationStorage.yottabits
+    case "Bytes":
+        unitName = UnitInformationStorage.bytes
+    case "Kilobytes":
+        unitName = UnitInformationStorage.kilobytes
+    case "Megabytes":
+        unitName = UnitInformationStorage.megabytes
+    case "Gigabytes":
+        unitName = UnitInformationStorage.gigabytes
+    case "Terabytes":
+        unitName = UnitInformationStorage.terabytes
+    case "Petabytes":
+        unitName = UnitInformationStorage.petabytes
+    case "Exabytes":
+        unitName = UnitInformationStorage.exabytes
+    case "Zettabytes":
+        unitName = UnitInformationStorage.zettabytes
+    case "Yottabytes":
+        unitName = UnitInformationStorage.yottabytes
         
         //UnitLength
     case "Megameters":
