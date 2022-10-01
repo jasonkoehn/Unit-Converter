@@ -26,13 +26,13 @@ var converters: [Converter] = [
     Converter(name: "Electric Resistance", units: ElectricResistanceValues, inUnit: "Ohms", outUnit: "Ohms"),
     Converter(name: "Energy", units: EnergyValues, inUnit: "Kilowatt Hours", outUnit: "Joules"),
     Converter(name: "Frequency", units: FrequencyValues, inUnit: "Megahertz", outUnit: "Megahertz"),
-    Converter(name: "Fuel Efficiency", units: FuelEfficiencyValues, inUnit: "Miles Per Gallon", outUnit: "Liters Per 100 Kilometers")
+    Converter(name: "Fuel Efficiency", units: FuelEfficiencyValues, inUnit: "Miles Per Gallon", outUnit: "Liters Per 100 Kilometers"),
+    Converter(name: "Information Storage", units: InformationValues, inUnit: "Bits", outUnit: "Bytes"),
+    Converter(name: "Length", units: LengthValues, inUnit: "Meters", outUnit: "Yards"),
+    Converter(name: "Mass", units: MassValues, inUnit: "Kilograms", outUnit: "Pounds"),
+    Converter(name: "Power", units: PowerValues, inUnit: "Kilowatts", outUnit: "Horsepower"),
+    Converter(name: "Pressure", units: PressureValues, inUnit: "Bars", outUnit: "Pounds Per Square Inch"),
+    Converter(name: "Speed", units: SpeedValues, inUnit: "Knots", outUnit: "Miles Per Hour"),
+    Converter(name: "Temperature", units: TemperatureValues, inUnit: "Celsius", outUnit: "Fahrenheit"),
+    Converter(name: "Volume", units: VolumeValues, inUnit: "Liters", outUnit: "Quarts")
 ]
-//Converters(name: "Information Storage", units: InformationStorageValues),
-//Converters(name: "Length", units: LengthValues),
-//Converters(name: "Mass", units: MassValues),
-//Converters(name: "Power", units: PowerValues),
-//Converters(name: "Pressure", units: PressureValues),
-//Converters(name: "Speed", units: SpeedValues),
-//Converters(name: "Temperature", units: TemperatureValues),
-//Converters(name: "Volume", units: VolumeValues)

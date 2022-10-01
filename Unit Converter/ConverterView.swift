@@ -28,6 +28,7 @@ struct ConverterView: View {
                                 Text(unit).tag(unit)
                             }
                         }
+                        .pickerStyle(.menu)
                         .padding(.vertical, 5)
                         TextField("", value: $firstAmount, formatter: Formatter.inNumberFormat)
                             .onTapGesture {
@@ -56,6 +57,7 @@ struct ConverterView: View {
                                 Text(unit).tag(unit)
                             }
                         }
+                        .pickerStyle(.menu)
                         .padding(.vertical, 5)
                         Text(FormatNum(from: Measurement(value: firstAmount, unit: SwitchToUnits(text: inUnit)).converted(to: SwitchToUnits(text: outUnit)).value as NSNumber))
                             .font(.system(size: 25))
