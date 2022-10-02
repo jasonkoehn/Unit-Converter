@@ -34,5 +34,5 @@ var converters: [Converter] = [
     Converter(name: "Pressure", units: PressureValues, inUnit: "Bars", outUnit: "Pounds Per Square Inch"),
     Converter(name: "Speed", units: SpeedValues, inUnit: "Knots", outUnit: "Miles Per Hour"),
     Converter(name: "Temperature", units: TemperatureValues, inUnit: "Celsius", outUnit: "Fahrenheit"),
-    Converter(name: "Volume", units: VolumeValues, inUnit: "Liters", outUnit: "Quarts")
+    Converter(name: "Volume", units: VolumeValues, inUnit: "Gallons", outUnit: "Liters")
 ]

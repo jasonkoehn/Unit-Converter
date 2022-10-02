@@ -78,9 +78,3 @@ struct ConverterView: View {
         return formatter.string(from: from)!
     }
 }
-
-struct ConverterView_Previews: PreviewProvider {
-    static var previews: some View {
-        ConverterView(name: "Volume", units: VolumeValues, inUnit: "Liters", outUnit: "Quarts")
-    }
-}
