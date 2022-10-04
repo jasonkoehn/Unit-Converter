@@ -15,3 +15,10 @@ extension Formatter {
         return formatter
     }()
 }
+
+func FormatNum(from: NSNumber) -> String {
+    let formatter = NumberFormatter()
+    formatter.minimumFractionDigits = 0
+    formatter.maximumFractionDigits = 4
+    return formatter.string(from: from)!
+}
