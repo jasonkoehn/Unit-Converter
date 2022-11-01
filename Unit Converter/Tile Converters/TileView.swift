@@ -30,6 +30,10 @@ struct TileView: View {
                         }
                         .pickerStyle(.menu)
                         .padding(.vertical, 5)
+                        .accentColor(Color(.systemRed))
+                        .onChange(of: inUnit) { _ in
+                            UserDefaults.standard.set(inUnit, forKey: "InUnit"+name)
+                        }
                         TextField("", value: $firstAmount, formatter: Formatter.inNumberFormat)
                             .onTapGesture {
                                 firstAmount = 0
@@ -59,6 +63,10 @@ struct TileView: View {
                         }
                         .pickerStyle(.menu)
                         .padding(.vertical, 5)
+                        .accentColor(Color(.systemRed))
+                        .onChange(of: outUnit) { _ in
+                            UserDefaults.standard.set(outUnit, forKey: "OutUnit"+name)
+                        }
                         Text(FormatNum(from: Measurement(value: firstAmount, unit: SwitchToUnits(text: inUnit)).converted(to: SwitchToUnits(text: outUnit)).value as NSNumber))
                             .font(.system(size: 25))
                             .textSelection(.enabled)
@@ -70,5 +78,9 @@ struct TileView: View {
         }
         .background(Color(.systemGray5))
         .cornerRadius(15)
+        .task {
+            inUnit = UserDefaults.standard.string(forKey: "InUnit"+name) ?? inUnit
+            outUnit = UserDefaults.standard.string(forKey: "OutUnit"+name) ?? outUnit
+        }
     }
 }
