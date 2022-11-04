@@ -30,7 +30,7 @@ struct TileView: View {
                         }
                         .pickerStyle(.menu)
                         .padding(.vertical, 5)
-                        .accentColor(Color(.systemRed))
+                        .accentColor(Color(.systemGreen))
                         .onChange(of: inUnit) { _ in
                             UserDefaults.standard.set(inUnit, forKey: "InUnit"+name)
                         }
@@ -63,7 +63,7 @@ struct TileView: View {
                         }
                         .pickerStyle(.menu)
                         .padding(.vertical, 5)
-                        .accentColor(Color(.systemRed))
+                        .accentColor(Color(.systemGreen))
                         .onChange(of: outUnit) { _ in
                             UserDefaults.standard.set(outUnit, forKey: "OutUnit"+name)
                         }
@@ -82,5 +82,11 @@ struct TileView: View {
             inUnit = UserDefaults.standard.string(forKey: "InUnit"+name) ?? inUnit
             outUnit = UserDefaults.standard.string(forKey: "OutUnit"+name) ?? outUnit
         }
+    }
+}
+
+struct TileView_Previews: PreviewProvider {
+    static var previews: some View {
+        TileView(name: "Volume", units: VolumeValues, inUnit: "Gallons", outUnit: "Liters")
     }
 }

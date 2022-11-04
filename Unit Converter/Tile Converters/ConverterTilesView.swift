@@ -9,17 +9,22 @@ import SwiftUI
 
 struct ConverterTilesView: View {
     @State var showSettingsView = false
+    @State var showEditView = false
     @FocusState var isInputActive: Bool
     var columns = [GridItem(.adaptive(minimum: 335))]
     var body: some View {
         NavigationView {
             ScrollView {
-                LazyVGrid(columns: columns) {
-                    ForEach(converters, id: \.name) { converter in
-                        TileView(name: converter.name, units: converter.units, inUnit: converter.inUnit, outUnit: converter.outUnit, isInputActive: _isInputActive)
+                if showEditView == true {
+                    EditView()
+                } else {
+                    LazyVGrid(columns: columns) {
+                        ForEach(converters, id: \.name) { converter in
+                            TileView(name: converter.name, units: converter.units, inUnit: converter.inUnit, outUnit: converter.outUnit, isInputActive: _isInputActive)
+                        }
                     }
+                    .padding(.horizontal, 7)
                 }
-                .padding(.horizontal, 7)
             }
             .navigationTitle("Converters")
             .toolbar {
@@ -35,6 +40,17 @@ struct ConverterTilesView: View {
             }){
                 Image(systemName: "gear")
                     .font(.system(size: 16))
+            })
+            .navigationBarItems(trailing: Button(action: {
+                showEditView.toggle()
+            }){
+                if showEditView == true {
+                    Text("Done")
+                        .font(.system(size: 17))
+                } else {
+                    Text("Edit")
+                        .font(.system(size: 17))
+                }
             })
         }
         .navigationViewStyle(StackNavigationViewStyle())

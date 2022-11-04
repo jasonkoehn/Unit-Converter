@@ -10,6 +10,8 @@
 		871D7AA528DB68C20092618D /* Unit_ConverterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871D7AA428DB68C20092618D /* Unit_ConverterApp.swift */; };
 		871D7AA928DB68C30092618D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 871D7AA828DB68C30092618D /* Assets.xcassets */; };
 		871D7AAD28DB68C30092618D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 871D7AAC28DB68C30092618D /* Preview Assets.xcassets */; };
+		878F118B2915662300D39972 /* Custom Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878F118A2915662300D39972 /* Custom Views.swift */; };
+		878F118E29156C9A00D39972 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878F118D29156C9A00D39972 /* EditView.swift */; };
 		87C59957291023D600EB934D /* PCConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C59956291023D600EB934D /* PCConverterView.swift */; };
 		87C5996A2910438900EB934D /* ConverterTilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C599692910438900EB934D /* ConverterTilesView.swift */; };
 		87C5996C291043AE00EB934D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C5996B291043AE00EB934D /* SettingsView.swift */; };
@@ -26,6 +28,8 @@
 		871D7AA828DB68C30092618D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		871D7AAA28DB68C30092618D /* Unit_Converter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Unit_Converter.entitlements; sourceTree = "<group>"; };
 		871D7AAC28DB68C30092618D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		878F118A2915662300D39972 /* Custom Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Custom Views.swift"; sourceTree = "<group>"; };
+		878F118D29156C9A00D39972 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		87C59956291023D600EB934D /* PCConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCConverterView.swift; sourceTree = "<group>"; };
 		87C599692910438900EB934D /* ConverterTilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterTilesView.swift; sourceTree = "<group>"; };
 		87C5996B291043AE00EB934D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
@@ -71,6 +75,7 @@
 				87C599682910430700EB934D /* Tile Converters */,
 				87C59958291023E600EB934D /* PickerConverter */,
 				87C5996F2910444B00EB934D /* Units&Extensions */,
+				878F118C291568DC00D39972 /* Custom Stuff */,
 				871D7AA828DB68C30092618D /* Assets.xcassets */,
 				871D7AAA28DB68C30092618D /* Unit_Converter.entitlements */,
 				871D7AAB28DB68C30092618D /* Preview Content */,
@@ -86,6 +91,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		878F118C291568DC00D39972 /* Custom Stuff */ = {
+			isa = PBXGroup;
+			children = (
+				878F118A2915662300D39972 /* Custom Views.swift */,
+			);
+			path = "Custom Stuff";
+			sourceTree = "<group>";
+		};
 		87C59958291023E600EB934D /* PickerConverter */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +112,7 @@
 			children = (
 				87C599692910438900EB934D /* ConverterTilesView.swift */,
 				87C5996D2910440000EB934D /* TileView.swift */,
+				878F118D29156C9A00D39972 /* EditView.swift */,
 			);
 			path = "Tile Converters";
 			sourceTree = "<group>";
@@ -186,12 +200,14 @@
 			files = (
 				87C5996E2910440000EB934D /* TileView.swift in Sources */,
 				87C599752910452700EB934D /* UnitsSwitch.swift in Sources */,
+				878F118E29156C9A00D39972 /* EditView.swift in Sources */,
 				87C599712910449C00EB934D /* ConvertersArray.swift in Sources */,
 				87C5996A2910438900EB934D /* ConverterTilesView.swift in Sources */,
 				87C59957291023D600EB934D /* PCConverterView.swift in Sources */,
 				871D7AA528DB68C20092618D /* Unit_ConverterApp.swift in Sources */,
 				87C599772910453700EB934D /* Extensions.swift in Sources */,
 				87C599732910450400EB934D /* UnitArrays.swift in Sources */,
+				878F118B2915662300D39972 /* Custom Views.swift in Sources */,
 				87C5996C291043AE00EB934D /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
