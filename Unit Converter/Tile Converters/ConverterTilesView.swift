@@ -16,7 +16,7 @@ struct ConverterTilesView: View {
         NavigationView {
             ScrollView {
                 if showEditView == true {
-                    EditView()
+                    
                 } else {
                     LazyVGrid(columns: columns) {
                         ForEach(converters, id: \.name) { converter in
