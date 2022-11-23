@@ -9,10 +9,7 @@ import SwiftUI
 
 struct TabsView: View {
     var body: some View {
-        TabView {
-            ConverterTilesView()
-            PCConverterView()
-        }
+        Text("Hello")
     }
 }
 

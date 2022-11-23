@@ -10,18 +10,12 @@
 		871D7AA528DB68C20092618D /* Unit_ConverterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871D7AA428DB68C20092618D /* Unit_ConverterApp.swift */; };
 		871D7AA928DB68C30092618D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 871D7AA828DB68C30092618D /* Assets.xcassets */; };
 		871D7AAD28DB68C30092618D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 871D7AAC28DB68C30092618D /* Preview Assets.xcassets */; };
-		878F118B2915662300D39972 /* Custom Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878F118A2915662300D39972 /* Custom Views.swift */; };
-		87C59957291023D600EB934D /* PCConverterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C59956291023D600EB934D /* PCConverterView.swift */; };
-		87C5996A2910438900EB934D /* ConverterTilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C599692910438900EB934D /* ConverterTilesView.swift */; };
 		87C5996C291043AE00EB934D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C5996B291043AE00EB934D /* SettingsView.swift */; };
-		87C5996E2910440000EB934D /* TileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C5996D2910440000EB934D /* TileView.swift */; };
 		87C599712910449C00EB934D /* ConvertersArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C599702910449B00EB934D /* ConvertersArray.swift */; };
 		87C599732910450400EB934D /* UnitArrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C599722910450400EB934D /* UnitArrays.swift */; };
 		87C599752910452700EB934D /* UnitsSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C599742910452700EB934D /* UnitsSwitch.swift */; };
 		87C599772910453700EB934D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C599762910453700EB934D /* Extensions.swift */; };
-		87D146D6291B567A00F42F3C /* CustomisableTileV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D146D5291B567A00F42F3C /* CustomisableTileV.swift */; };
-		87D146D8291B569200F42F3C /* CustomTilesHomeV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87D146D7291B569200F42F3C /* CustomTilesHomeV.swift */; };
-		87F256242915D48B00B37CD6 /* TabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F256232915D48B00B37CD6 /* TabView.swift */; };
+		87F256242915D48B00B37CD6 /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F256232915D48B00B37CD6 /* TabsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,18 +24,12 @@
 		871D7AA828DB68C30092618D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		871D7AAA28DB68C30092618D /* Unit_Converter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Unit_Converter.entitlements; sourceTree = "<group>"; };
 		871D7AAC28DB68C30092618D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		878F118A2915662300D39972 /* Custom Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Custom Views.swift"; sourceTree = "<group>"; };
-		87C59956291023D600EB934D /* PCConverterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCConverterView.swift; sourceTree = "<group>"; };
-		87C599692910438900EB934D /* ConverterTilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterTilesView.swift; sourceTree = "<group>"; };
 		87C5996B291043AE00EB934D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		87C5996D2910440000EB934D /* TileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileView.swift; sourceTree = "<group>"; };
 		87C599702910449B00EB934D /* ConvertersArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertersArray.swift; sourceTree = "<group>"; };
 		87C599722910450400EB934D /* UnitArrays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitArrays.swift; sourceTree = "<group>"; };
 		87C599742910452700EB934D /* UnitsSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitsSwitch.swift; sourceTree = "<group>"; };
 		87C599762910453700EB934D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		87D146D5291B567A00F42F3C /* CustomisableTileV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomisableTileV.swift; sourceTree = "<group>"; };
-		87D146D7291B569200F42F3C /* CustomTilesHomeV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTilesHomeV.swift; sourceTree = "<group>"; };
-		87F256232915D48B00B37CD6 /* TabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabView.swift; sourceTree = "<group>"; };
+		87F256232915D48B00B37CD6 /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,13 +63,9 @@
 			isa = PBXGroup;
 			children = (
 				871D7AA428DB68C20092618D /* Unit_ConverterApp.swift */,
-				87F256232915D48B00B37CD6 /* TabView.swift */,
+				87F256232915D48B00B37CD6 /* TabsView.swift */,
 				87C5996B291043AE00EB934D /* SettingsView.swift */,
-				87C599682910430700EB934D /* Tile Converters */,
-				87D146D4291B564500F42F3C /* Custom Tiles */,
-				87C59958291023E600EB934D /* PickerConverter */,
 				87C5996F2910444B00EB934D /* Units&Extensions */,
-				878F118C291568DC00D39972 /* Custom Stuff */,
 				871D7AA828DB68C30092618D /* Assets.xcassets */,
 				871D7AAA28DB68C30092618D /* Unit_Converter.entitlements */,
 				871D7AAB28DB68C30092618D /* Preview Content */,
@@ -97,31 +81,6 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		878F118C291568DC00D39972 /* Custom Stuff */ = {
-			isa = PBXGroup;
-			children = (
-				878F118A2915662300D39972 /* Custom Views.swift */,
-			);
-			path = "Custom Stuff";
-			sourceTree = "<group>";
-		};
-		87C59958291023E600EB934D /* PickerConverter */ = {
-			isa = PBXGroup;
-			children = (
-				87C59956291023D600EB934D /* PCConverterView.swift */,
-			);
-			path = PickerConverter;
-			sourceTree = "<group>";
-		};
-		87C599682910430700EB934D /* Tile Converters */ = {
-			isa = PBXGroup;
-			children = (
-				87C599692910438900EB934D /* ConverterTilesView.swift */,
-				87C5996D2910440000EB934D /* TileView.swift */,
-			);
-			path = "Tile Converters";
-			sourceTree = "<group>";
-		};
 		87C5996F2910444B00EB934D /* Units&Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,15 +90,6 @@
 				87C599762910453700EB934D /* Extensions.swift */,
 			);
 			path = "Units&Extensions";
-			sourceTree = "<group>";
-		};
-		87D146D4291B564500F42F3C /* Custom Tiles */ = {
-			isa = PBXGroup;
-			children = (
-				87D146D7291B569200F42F3C /* CustomTilesHomeV.swift */,
-				87D146D5291B567A00F42F3C /* CustomisableTileV.swift */,
-			);
-			path = "Custom Tiles";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,7 +120,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1400;
-				LastUpgradeCheck = 1400;
+				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					871D7AA028DB68C20092618D = {
 						CreatedOnToolsVersion = 14.0;
@@ -212,18 +162,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87F256242915D48B00B37CD6 /* TabView.swift in Sources */,
-				87D146D6291B567A00F42F3C /* CustomisableTileV.swift in Sources */,
-				87C5996E2910440000EB934D /* TileView.swift in Sources */,
+				87F256242915D48B00B37CD6 /* TabsView.swift in Sources */,
 				87C599752910452700EB934D /* UnitsSwitch.swift in Sources */,
-				87D146D8291B569200F42F3C /* CustomTilesHomeV.swift in Sources */,
 				87C599712910449C00EB934D /* ConvertersArray.swift in Sources */,
-				87C5996A2910438900EB934D /* ConverterTilesView.swift in Sources */,
-				87C59957291023D600EB934D /* PCConverterView.swift in Sources */,
 				871D7AA528DB68C20092618D /* Unit_ConverterApp.swift in Sources */,
 				87C599772910453700EB934D /* Extensions.swift in Sources */,
 				87C599732910450400EB934D /* UnitArrays.swift in Sources */,
-				878F118B2915662300D39972 /* Custom Views.swift in Sources */,
 				87C5996C291043AE00EB934D /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +208,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -322,6 +267,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -346,8 +292,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Unit Converter/Unit_Converter.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Unit Converter/Preview Content\"";
 				DEVELOPMENT_TEAM = 33MAXP8MNQ;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -386,8 +336,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Unit Converter/Unit_Converter.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"Unit Converter/Preview Content\"";
 				DEVELOPMENT_TEAM = 33MAXP8MNQ;
 				ENABLE_HARDENED_RUNTIME = YES;
