@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TabsView: View {
     var body: some View {
-        Text("Hello")
+        TilesPageView()
     }
 }
 

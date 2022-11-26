@@ -10,6 +10,9 @@
 		871D7AA528DB68C20092618D /* Unit_ConverterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871D7AA428DB68C20092618D /* Unit_ConverterApp.swift */; };
 		871D7AA928DB68C30092618D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 871D7AA828DB68C30092618D /* Assets.xcassets */; };
 		871D7AAD28DB68C30092618D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 871D7AAC28DB68C30092618D /* Preview Assets.xcassets */; };
+		878F6C62292EBAFF00AB8ADB /* TileBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878F6C61292EBAFF00AB8ADB /* TileBoxView.swift */; };
+		878F6C64292EBD7900AB8ADB /* CreateTilesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878F6C63292EBD7900AB8ADB /* CreateTilesView.swift */; };
+		87A61B0629328B39004857A5 /* TilesPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A61B0529328B39004857A5 /* TilesPageView.swift */; };
 		87C5996C291043AE00EB934D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C5996B291043AE00EB934D /* SettingsView.swift */; };
 		87C599712910449C00EB934D /* ConvertersArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C599702910449B00EB934D /* ConvertersArray.swift */; };
 		87C599732910450400EB934D /* UnitArrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C599722910450400EB934D /* UnitArrays.swift */; };
@@ -24,6 +27,9 @@
 		871D7AA828DB68C30092618D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		871D7AAA28DB68C30092618D /* Unit_Converter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Unit_Converter.entitlements; sourceTree = "<group>"; };
 		871D7AAC28DB68C30092618D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		878F6C61292EBAFF00AB8ADB /* TileBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileBoxView.swift; sourceTree = "<group>"; };
+		878F6C63292EBD7900AB8ADB /* CreateTilesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTilesView.swift; sourceTree = "<group>"; };
+		87A61B0529328B39004857A5 /* TilesPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TilesPageView.swift; sourceTree = "<group>"; };
 		87C5996B291043AE00EB934D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		87C599702910449B00EB934D /* ConvertersArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertersArray.swift; sourceTree = "<group>"; };
 		87C599722910450400EB934D /* UnitArrays.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitArrays.swift; sourceTree = "<group>"; };
@@ -65,6 +71,8 @@
 				871D7AA428DB68C20092618D /* Unit_ConverterApp.swift */,
 				87F256232915D48B00B37CD6 /* TabsView.swift */,
 				87C5996B291043AE00EB934D /* SettingsView.swift */,
+				878F6C65292EBD7D00AB8ADB /* CustomTiles */,
+				878F6C60292EBAE200AB8ADB /* Tiles */,
 				87C5996F2910444B00EB934D /* Units&Extensions */,
 				871D7AA828DB68C30092618D /* Assets.xcassets */,
 				871D7AAA28DB68C30092618D /* Unit_Converter.entitlements */,
@@ -79,6 +87,23 @@
 				871D7AAC28DB68C30092618D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		878F6C60292EBAE200AB8ADB /* Tiles */ = {
+			isa = PBXGroup;
+			children = (
+				87A61B0529328B39004857A5 /* TilesPageView.swift */,
+				878F6C61292EBAFF00AB8ADB /* TileBoxView.swift */,
+			);
+			path = Tiles;
+			sourceTree = "<group>";
+		};
+		878F6C65292EBD7D00AB8ADB /* CustomTiles */ = {
+			isa = PBXGroup;
+			children = (
+				878F6C63292EBD7900AB8ADB /* CreateTilesView.swift */,
+			);
+			path = CustomTiles;
 			sourceTree = "<group>";
 		};
 		87C5996F2910444B00EB934D /* Units&Extensions */ = {
@@ -164,9 +189,12 @@
 			files = (
 				87F256242915D48B00B37CD6 /* TabsView.swift in Sources */,
 				87C599752910452700EB934D /* UnitsSwitch.swift in Sources */,
+				878F6C62292EBAFF00AB8ADB /* TileBoxView.swift in Sources */,
 				87C599712910449C00EB934D /* ConvertersArray.swift in Sources */,
+				878F6C64292EBD7900AB8ADB /* CreateTilesView.swift in Sources */,
 				871D7AA528DB68C20092618D /* Unit_ConverterApp.swift in Sources */,
 				87C599772910453700EB934D /* Extensions.swift in Sources */,
+				87A61B0629328B39004857A5 /* TilesPageView.swift in Sources */,
 				87C599732910450400EB934D /* UnitArrays.swift in Sources */,
 				87C5996C291043AE00EB934D /* SettingsView.swift in Sources */,
 			);
