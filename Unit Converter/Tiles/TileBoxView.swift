@@ -68,6 +68,6 @@ struct TileBoxView: View {
             .padding(.bottom, 53)
         }
         .background(Color(.systemGray5))
-        .cornerRadius(15)
+        .cornerRadius(12)
     }
 }
