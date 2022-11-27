@@ -44,8 +44,11 @@ struct TileAddView: View {
                 }
                 .pickerStyle(.menu)
             }
+            .background(Color(.systemGray5))
+            .cornerRadius(12)
+            Spacer()
         }
-        .navigationTitle("Add a Tile")
+        .navigationTitle("Add A Tile")
         .navigationBarItems(trailing: Button(action: {
             converter.append(Converter(name: name, units: units, inUnit: initInUnit, outUnit: initOutUnit))
             presentationMode.wrappedValue.dismiss()
