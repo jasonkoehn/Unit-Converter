@@ -10,6 +10,8 @@ import SwiftUI
 struct TileBoxView: View {
     var name: String
     var units: [String]
+    var group: String
+    var unitAmount: String
     @State var inUnit: String
     @State var outUnit: String
     @FocusState var isInputActive: Bool
@@ -23,13 +25,19 @@ struct TileBoxView: View {
             HStack {
                 Spacer().overlay {
                     VStack {
-                        Picker("Unit", selection: $inUnit) {
-                            ForEach(units, id: \.self) { unit in
-                                Text(unit).tag(unit)
+                        if unitAmount == "Single" {
+                            Text(inUnit)
+                                .foregroundColor(.blue)
+                                .padding(.vertical, 5)
+                        } else {
+                            Picker("Unit", selection: $inUnit) {
+                                ForEach(units, id: \.self) { unit in
+                                    Text(unit).tag(unit)
+                                }
                             }
+                            .pickerStyle(.menu)
+                            .padding(.vertical, 5)
                         }
-                        .pickerStyle(.menu)
-                        .padding(.vertical, 5)
                         TextField("", value: $firstAmount, formatter: Formatter.inNumberFormat)
                             .onTapGesture {
                                 firstAmount = 0
@@ -51,13 +59,19 @@ struct TileBoxView: View {
                 }
                 Spacer().overlay {
                     VStack {
-                        Picker("Unit", selection: $outUnit) {
-                            ForEach(units, id: \.self) { unit in
-                                Text(unit).tag(unit)
+                        if unitAmount == "Single" {
+                            Text(outUnit)
+                                .foregroundColor(.blue)
+                                .padding(.vertical, 5)
+                        } else {
+                            Picker("Unit", selection: $outUnit) {
+                                ForEach(units, id: \.self) { unit in
+                                    Text(unit).tag(unit)
+                                }
                             }
+                            .pickerStyle(.menu)
+                            .padding(.vertical, 5)
                         }
-                        .pickerStyle(.menu)
-                        .padding(.vertical, 5)
                         Text(FormatNum(from: Measurement(value: firstAmount, unit: SwitchToUnits(text: inUnit)).converted(to: SwitchToUnits(text: outUnit)).value as NSNumber))
                             .font(.system(size: 25))
                             .textSelection(.enabled)

@@ -20,7 +20,7 @@ struct TilesPageView: View {
             ZStack {
                 if isEditing == true {
                     List {
-                        ForEach(converters, id: \.name) { converter in
+                        ForEach(converters, id: \.id) { converter in
                             Text(converter.name)
                                 .font(.system(size: 20))
                         }
@@ -36,8 +36,8 @@ struct TilesPageView: View {
                 } else {
                     ScrollView {
                         LazyVGrid(columns: columns) {
-                            ForEach(converters, id: \.name) { converter in
-                                TileBoxView(name: converter.name, units: converter.units, inUnit: converter.inUnit, outUnit: converter.outUnit, isInputActive: _isInputActive)
+                            ForEach(converters, id: \.id) { converter in
+                                TileBoxView(name: converter.name, units: converter.units, group: converter.group, unitAmount: converter.unitAmount, inUnit: converter.inUnit, outUnit: converter.outUnit, isInputActive: _isInputActive)
                             }
                         }
                         .padding(.horizontal, 7)
@@ -89,7 +89,7 @@ struct TilesPageView: View {
         }
         .sheet(isPresented: $showAddTileView) {
             NavigationView {
-                TileAddView(converter: $converters)
+                TileAddView(converters: $converters)
             }
         }
         .task {
