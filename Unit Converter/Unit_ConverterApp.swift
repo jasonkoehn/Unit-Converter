@@ -18,15 +18,9 @@ struct Unit_ConverterApp: App {
         let encodedData = try! encoder.encode(initConverters)
         try! encodedData.write(to: convertersUrl)
     }
-    @Environment(.scenePhase) private var scenePhase
     var body: some Scene {
         WindowGroup {
             TabsView()
-        }
-        .onChange(of: scenePhase) { phase in
-            if phase == .background {
-                // Save here
-            }
         }
     }
 }
