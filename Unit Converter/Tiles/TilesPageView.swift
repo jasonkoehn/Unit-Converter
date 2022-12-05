@@ -45,7 +45,6 @@ struct TilesPageView: View {
                     }
                 }
             }
-//            .background(Color.gray)
             .navigationTitle("Converters")
             .toolbar {
                 ToolbarItemGroup(placement: .keyboard) {
@@ -59,13 +58,11 @@ struct TilesPageView: View {
                 self.showSettingsView.toggle()
             }){
                 Image(systemName: "gear")
-//                    .foregroundColor(.orange)
             })
             .navigationBarItems(trailing: Button(action: {
                 self.showAddTileView.toggle()
             }){
                 Image(systemName: "plus")
-//                    .foregroundColor(.orange)
             })
             .navigationBarItems(trailing: Button(action: {
                 isEditing.toggle()
@@ -74,11 +71,9 @@ struct TilesPageView: View {
                 if isEditing == true {
                     Text("Done")
                         .font(.system(size: 18))
-//                        .foregroundColor(.orange)
                 } else {
                     Text("Edit")
                         .font(.system(size: 18))
-//                        .foregroundColor(.orange)
                 }
             })
         }
