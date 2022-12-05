@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TilesPageView: View {
+    @AppStorage("Pro") var isPro = false
     @State var showSettingsView = false
     @State var showAddTileView = false
     @FocusState var isInputActive: Bool

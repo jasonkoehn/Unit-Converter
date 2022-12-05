@@ -17,7 +17,6 @@
 		87C599712910449C00EB934D /* ConvertersArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C599702910449B00EB934D /* ConvertersArray.swift */; };
 		87C599752910452700EB934D /* UnitsSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C599742910452700EB934D /* UnitsSwitch.swift */; };
 		87C599772910453700EB934D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C599762910453700EB934D /* Extensions.swift */; };
-		87F256242915D48B00B37CD6 /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F256232915D48B00B37CD6 /* TabsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +32,6 @@
 		87C599702910449B00EB934D /* ConvertersArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertersArray.swift; sourceTree = "<group>"; };
 		87C599742910452700EB934D /* UnitsSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitsSwitch.swift; sourceTree = "<group>"; };
 		87C599762910453700EB934D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		87F256232915D48B00B37CD6 /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +65,6 @@
 			isa = PBXGroup;
 			children = (
 				871D7AA428DB68C20092618D /* Unit_ConverterApp.swift */,
-				87F256232915D48B00B37CD6 /* TabsView.swift */,
 				87C5996B291043AE00EB934D /* SettingsView.swift */,
 				878F6C60292EBAE200AB8ADB /* Tiles */,
 				87C5996F2910444B00EB934D /* Units&Extensions */,
@@ -176,7 +173,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87F256242915D48B00B37CD6 /* TabsView.swift in Sources */,
 				87C599752910452700EB934D /* UnitsSwitch.swift in Sources */,
 				87029F372932B2D0009F052B /* TileAddView.swift in Sources */,
 				878F6C62292EBAFF00AB8ADB /* TileBoxView.swift in Sources */,

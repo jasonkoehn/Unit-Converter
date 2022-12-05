@@ -9,14 +9,17 @@ import SwiftUI
 
 struct SettingsView: View {
     @Environment(\.presentationMode) var presentationMode
+    @AppStorage("Pro") var isPro = false
     var body: some View {
-        Text("Settings")
-            .navigationTitle("Settings")
-            .navigationBarItems(trailing: Button(action: {
-                presentationMode.wrappedValue.dismiss()
-            }){
-                Text("Done")
-            })
+        Form {
+            Toggle("Pro:", isOn: $isPro)
+        }
+        .navigationTitle("Settings")
+        .navigationBarItems(trailing: Button(action: {
+            presentationMode.wrappedValue.dismiss()
+        }){
+            Text("Done")
+        })
     }
 }
 

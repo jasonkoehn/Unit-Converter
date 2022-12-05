@@ -21,7 +21,7 @@ struct Unit_ConverterApp: App {
 //    @Environment(\.scenePhase) private var scenePhase
     var body: some Scene {
         WindowGroup {
-            TabsView()
+            TilesPageView()
         }
 //        .onChange(of: scenePhase) { phase in
 //            if phase == .background {

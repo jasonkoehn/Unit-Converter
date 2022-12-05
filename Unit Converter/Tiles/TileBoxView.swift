@@ -38,9 +38,14 @@ struct TileBoxView: View {
                             .pickerStyle(.menu)
                             .padding(.vertical, 5)
                         }
-                        TextField("", value: $firstAmount, formatter: Formatter.inNumberFormat)
+                        TextField("Value", value: $firstAmount, formatter: Formatter.inNumberFormat)
                             .onTapGesture {
                                 firstAmount = 0
+                            }
+                            .onChange(of: isInputActive) { input in
+                                if input == false {
+                                    firstAmount = 1
+                                }
                             }
                             .keyboardType(.decimalPad)
                             .textFieldStyle(.roundedBorder)
