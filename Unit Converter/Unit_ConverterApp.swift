@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct Unit_ConverterApp: App {
+    @AppStorage("appearance") var appearance: String = "System"
     var body: some Scene {
         WindowGroup {
             TilesPageView()
+                .preferredColorScheme(appearance == "System" ? nil : (appearance == "Dark" ? .dark : .light))
         }
     }
 }

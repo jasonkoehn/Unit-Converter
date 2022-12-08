@@ -27,7 +27,7 @@ struct TileBoxView: View {
                     VStack {
                         if unitAmount == "Single" {
                             Text(inUnit)
-                                .foregroundColor(.blue)
+                                .foregroundColor(.orange)
                                 .padding(.vertical, 5)
                         } else {
                             Picker("Unit", selection: $inUnit) {
@@ -37,6 +37,7 @@ struct TileBoxView: View {
                             }
                             .pickerStyle(.menu)
                             .padding(.vertical, 5)
+                            .accentColor(.orange)
                         }
                         TextField("Value", value: $firstAmount, formatter: Formatter.inNumberFormat)
                             .onTapGesture {
@@ -61,12 +62,13 @@ struct TileBoxView: View {
                 }) {
                     Image(systemName: "arrow.right")
                         .font(.system(size: 23))
+                        .foregroundColor(.orange)
                 }
                 Spacer().overlay {
                     VStack {
                         if unitAmount == "Single" {
                             Text(outUnit)
-                                .foregroundColor(.blue)
+                                .foregroundColor(.orange)
                                 .padding(.vertical, 5)
                         } else {
                             Picker("Unit", selection: $outUnit) {
@@ -76,6 +78,7 @@ struct TileBoxView: View {
                             }
                             .pickerStyle(.menu)
                             .padding(.vertical, 5)
+                            .accentColor(.orange)
                         }
                         Text(FormatNum(from: Measurement(value: firstAmount, unit: SwitchToUnits(text: inUnit)).converted(to: SwitchToUnits(text: outUnit)).value as NSNumber))
                             .font(.system(size: 25))

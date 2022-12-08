@@ -9,9 +9,17 @@ import SwiftUI
 
 struct SettingsView: View {
     @Environment(\.presentationMode) var presentationMode
-    @AppStorage("Pro") var isPro = false
+    @AppStorage("appearance") var appearance: String = "System"
+    @State private var appearanceSettings = ["System", "Light", "Dark"]
+    @AppStorage("plus") var isPro = false
     var body: some View {
         Form {
+            Picker("", selection: $appearance) {
+                ForEach(appearanceSettings, id: \.self) { setting in
+                    Text(setting).tag(setting)
+                }
+            }
+            .pickerStyle(.segmented)
             Toggle("Pro:", isOn: $isPro)
         }
         .navigationTitle("Settings")
@@ -20,6 +28,7 @@ struct SettingsView: View {
         }){
             Text("Done")
         })
+        .preferredColorScheme(appearance == "System" ? nil : (appearance == "Dark" ? .dark : .light))
     }
 }
 
@@ -28,3 +37,4 @@ struct SettingsView_Previews: PreviewProvider {
         SettingsView()
     }
 }
+
